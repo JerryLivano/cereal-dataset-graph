@@ -1,0 +1,75 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-brand h2 {
+  font-family: "Monoton", sans-serif;
+  font-size: 32px;
+  margin-top: 5px;
+}
+
+section div div h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+  color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+  text-decoration: none;
+  color: #555;
+}
+
+.hero {
+  background-image: url("https://storage.googleapis.com/kaggle-datasets-images/2021/3453/c45f7c23c2dfd5ef80b22c85eac26abd/dataset-card.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Background overlay with 40% opacity */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-caption {
+  position: relative;
+  z-index: 1;
+  padding: 180px 0;
+}
+
+.hero h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 1000;
+  font-size: 100px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.hero p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.mfr {
+  font-size: 20px;
+  font-weight: bold;
+}

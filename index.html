@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>80 Cereals</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d158cba86a.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 80px;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h2>80 CEREALS</h2>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dataset.html">Dataset</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-caption">
+                <h1>80 CEREALS</h1>
+                <p>Data Visualizations</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: aliceblue">
+        <div class="container p-2 pt-5 pb-5">
+            <div class="text-center mb-5">
+                <h1>Bar Chart by Rating</h1>
+            </div>
+            <div class="mb-2" data-aos="zoom-in" data-aos-duration="800">
+                <form action="">
+                    <div>
+                        <label for="data-btn">Data to show:</label>
+                    </div>
+                    <div class="d-flex">
+                        <input type="number" min="1" max="77" value="1" class="form-control" name="data-value"
+                            id="data-value" style="width: 20%;">
+                        <button type="button" id="data-btn" class="btn btn-dark ms-2">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="text-center" style="text-align: center;" data-aos="zoom-in" data-aos-duration="800">
+                <canvas id="canvas1" width="1300" height="500"></canvas>
+                <div class="mt-3 mb-3">
+                    <button class="btn btn-primary" id="sort-ascending">Sort Rating Ascending</button>
+                    <button class="btn btn-primary" id="sort-descending">Sort Rating Descending</button>
+                    <button class="btn btn-primary" id="sort-label-asc">Sort Name Ascending</button>
+                    <button class="btn btn-primary" id="sort-label-desc">Sort Name Descending</button>
+                </div>
+                <script type="module" src="js/bar_chart.js"></script>
+                <table class="table">
+                    <thead class="table-dark">
+                        <th>Name</th>
+                        <th>Mfr</th>
+                        <th>Type</th>
+                        <th>Calories</th>
+                        <th>Protein</th>
+                        <th>Fat</th>
+                        <th>Sodium</th>
+                        <th>Fiber</th>
+                        <th>Carbo</th>
+                        <th>Sugars</th>
+                        <th>Potass</th>
+                        <th>Vitamins</th>
+                        <th>Shelf</th>
+                        <th>Weight</th>
+                        <th>Cups</th>
+                        <th>Rating</th>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr>
+                            <td colspan="16">Click Bar to See Value</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container p-5">
+            <div class="text-center mb-5">
+                <h1>Pie Chart by Manufacturer</h1>
+            </div>
+            <div class="row">
+                <div class="col md-5 text-center" data-aos="fade-right" data-aos-duration="800">
+                    <canvas id="canvas2" width="600" height="600"></canvas>
+                    <script type="module" src="js/pie_chart.js"></script>
+                </div>
+                <div class="col md-7 text-center" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="mfr">
+                        Manufacturer: <span id="mfr"></span>
+                    </div>
+                    <table class="table">
+                        <thead class="table-dark">
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Calories</th>
+                            <th>Carbo</th>
+                            <th>Sugars</th>
+                            <th>Rating</th>
+                        </thead>
+                        <tbody class="tbody" id="table-pie">
+                            <tr>
+                                <td colspan="6">Click Part to See Value</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Source: https://mdbootstrap.com/docs/standard/navigation/footer/examples-and-customization/ -->
+    <footer class="bg-dark text-center text-white" id="footer">
+        <div class="container p-4 pb-0">
+            <section class="mb-4">
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            UTS GrafKom - 2172002 - 2172030
+        </div>
+    </footer>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
